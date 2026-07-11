@@ -17,18 +17,23 @@ tree.right = new BinaryTree(3);
 // tree.right.left = new BinaryTree(6);
 // tree.right.right = new BinaryTree(7);
 
-function node(root) {
-  if (root === null) return 0;
+// function node(root) {
+//   if (root === null) return 0;
 
+//   if (root.left === null && root.right === null) {
+//     return 1;
+//   }
+
+//   return node(root.left) + node(root.right);
+// }
+
+// console.log(node(tree));
+
+function countLeafNodes(root) {
+  if (root === null) return 0;
   if (root.left === null && root.right === null) {
     return 1;
   }
-
-  return node(root.left) + node(root.right);
+  return countLeafNodes(root.left) + countLeafNodes(root.right);
 }
-
-console.log(node(tree));
-
-// function countLeaves(root) {
-
-// }
+console.log(countLeafNodes(tree));
