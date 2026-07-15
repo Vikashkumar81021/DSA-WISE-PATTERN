@@ -15,7 +15,7 @@ function maxVal(arr, i = 0, max = -Infinity) {
   if (i >= arr.length) {
     return max;
   }
-  debugger;
+
   return maxVal(arr, i + 1, Math.max(max, arr[i]));
 }
 
