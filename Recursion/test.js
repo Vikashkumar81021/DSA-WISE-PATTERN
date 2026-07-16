@@ -15,8 +15,8 @@
 // }
 
 function print(n) {
-  if (n == 0) return 0; //1.5 2.4 3.3 2.2 1
+  if (n > 5) return 0; //1.5 2.4 3.3 2.2 1
   console.log(n);
-  print(n - 1);
+  print(n + 1);
 }
-print(5);
+print(1);
