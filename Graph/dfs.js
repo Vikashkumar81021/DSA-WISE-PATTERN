@@ -4,15 +4,15 @@ const graph = {
   C: ["A", "D"],
   D: ["B", "C"],
 };
-
 function dfs(node, visited) {
-  console.log("graph", node, graph[node]);
-
   if (visited.has(node)) return;
 
   visited.add(node);
 
   for (let neighbour of graph[node]) {
+    console.log("neigh", neighbour);
+    console.log("node", graph[node]);
+
     dfs(neighbour, visited);
   }
 }

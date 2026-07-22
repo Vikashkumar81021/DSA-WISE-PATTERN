@@ -1,5 +1,5 @@
 const vertices = ["A", "B", "C", "D"];
-//vertex bnaane k baad uska connection/disgara bna lo then uska edges bnaa do uss conection ka
+//vertex bnaane k baad uska connection/diagaram bna lo then uska edges bnaa do uss conection ka
 const edges = [
   ["A", "B"],
   ["A", "C"],
