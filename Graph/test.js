@@ -45,7 +45,7 @@ function DFS(node, visited, res) {
   visited.add(node);
   res.push(node);
   for (let neighbour of graph[node]) {
-    DFS(neighbour, visited);
+    DFS(neighbour, visited, res);
   }
   return res;
 }
