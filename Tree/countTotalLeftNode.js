@@ -8,12 +8,21 @@ class BinaryTree {
 const tree = new BinaryTree(1);
 tree.left = new BinaryTree(2);
 tree.right = new BinaryTree(3);
+tree.right.left = new BinaryTree(4);
 
 function countLeftNode(root) {
-  if (root == null || root.left == null) return 0;
+  if (root == null) return 0;
 
-  return 1 + countLeftNode(root.left);
+  let count = 0;
+
+  if (root.left != null) {
+    count++;
+  }
+
+  count += countLeftNode(root.left);
+  count += countLeftNode(root.right);
+
+  return count;
 }
-//function call krte time toh tree.left likh rha hai iska mtlb hua function ko hm bta rhe hai ki sirf tree.left pe chla bs
 
-console.log(countLeftNode(tree.left));
+console.log(countLeftNode(tree));
