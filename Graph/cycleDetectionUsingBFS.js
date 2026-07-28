@@ -22,6 +22,8 @@ function cycleDetectionBFS(node) {
   visited.add(node);
   while (Queue.length > 0) {
     let [node, parent] = Queue.shift();
+    console.log("parent", parent);
+
     for (let neighbour of graph[node]) {
       if (!visited.has(neighbour)) {
         visited.add(neighbour);
@@ -33,7 +35,7 @@ function cycleDetectionBFS(node) {
   }
   return false;
 }
-
+cycleDetectionBFS(graph);
 // For disconnected graph
 function isCycle() {
   for (let vertex of vertices) {
