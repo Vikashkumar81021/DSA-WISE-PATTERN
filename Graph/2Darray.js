@@ -3,8 +3,7 @@ let grid = [
   [0, 1, 1],
   [0, 0, 1],
 ];
-//r--> row
-//c-->collum
+
 let res = [];
 function dfs(r, c) {
   if (

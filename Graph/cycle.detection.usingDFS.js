@@ -23,12 +23,19 @@ let visited = new Set();
 function detectCycle(node, parent) {
   visited.add(node);
 
+  // for (let neighbour of graph[node]) {
+  //   if (visited.has(neighbour) && neighbour !== parent) {
+  //     return true;
+  //   }
+  //   if (!visited.has(neighbour)) {
+  //     if (detectCycle(neighbour, node)) return true;
+  //   }
+  // }
   for (let neighbour of graph[node]) {
-    if (visited.has(neighbour) && neighbour !== parent) {
-      return true;
-    }
     if (!visited.has(neighbour)) {
-      if (detectCycle(neighbour, node)) return true;
+      detectCycle(neighbour, node);
+    } else if (neighbour !== parent) {
+      return true;
     }
   }
   return false;
@@ -43,7 +50,9 @@ for (let vertex of vertices) {
     }
   }
 }
-console.log(hasCycle());
+
+console.log(hasCycle);
+console.log(visited);
 
 // function isCycleUndirectGraph(node, parent) {
 //   visited.add(node);
