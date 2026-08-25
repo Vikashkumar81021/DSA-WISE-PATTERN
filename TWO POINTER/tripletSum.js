@@ -3,6 +3,7 @@ function triplet(arr) {
   let result = [];
   for (let i = 0; i < arr.length - 2; i++) {
     if (arr[i] > 0 && arr[i] === arr[i - 1]) continue;
+    // continue → current iteration chhodo → next iteration par jao
 
     let start = i + 1,
       end = arr.length - 1;

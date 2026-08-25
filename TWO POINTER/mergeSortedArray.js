@@ -127,6 +127,7 @@ for (let i = 0; i < arr.length; i++) {
     pos.push(arr[i]);
   }
 }
+
 for (let i = 0; i < pos.length; i++) {
   pos[i] = pos[i] * pos[i];
 }
