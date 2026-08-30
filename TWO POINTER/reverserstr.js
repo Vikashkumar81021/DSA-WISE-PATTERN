@@ -11,4 +11,4 @@ function rev(str) {
   }
   return arr.join("");
 }
-console.log(rev("hello"));
+console.log(rev(""));

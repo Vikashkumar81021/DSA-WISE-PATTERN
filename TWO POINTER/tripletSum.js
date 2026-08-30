@@ -6,7 +6,7 @@ function triplet(arr) {
     // continue → current iteration chhodo → next iteration par jao
 
     let start = i + 1,
-      end = arr.length - 1;
+     end = arr.length - 1;
     while (start < end) {
       let sum = arr[start] + arr[end] + arr[i];
       if (sum === 0) {
@@ -30,3 +30,4 @@ function triplet(arr) {
 }
 let nums = [0, 0, 0];
 console.log(triplet(nums));
+
