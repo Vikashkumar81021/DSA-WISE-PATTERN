@@ -38,8 +38,8 @@
 // console.log(maxSubArray(arra, k));
 
 //using for loop
-let arr = [100, 200, 300, 400];
-let k = 2;
+let arr = [1, 4, 2, 10, 23, 3, 1, 0, 20];
+let k = 4;
 let windowSum = 0;
 for (let i = 0; i < k; i++) {
   windowSum += arr[i];
