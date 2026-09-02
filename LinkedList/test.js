@@ -23,8 +23,7 @@ function insertAtEnd(head) {
   curr.next = tail;
   return head;
 }
-// head = insertAtEnd(head);
-
+// head = insertAtEnd(head)
 function deleteAtEnd(head) {
   let curr = head;
   while (curr.next.next !== null) {
