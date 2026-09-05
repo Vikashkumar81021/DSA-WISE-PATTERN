@@ -12,15 +12,14 @@ node2.next = node3;
 
 let arr = [];
 let curr = node;
-console.log("current", curr);
-
 while (curr !== null) {
   arr.push(curr.data);
   curr = curr.next;
 }
-console.log(arr);
+console.log("Arr", arr);
 
-let lastIndex = arr.length - 1;
+let lastIndex = arr.length - 1; //last element index
+console.log("lastIn", lastIndex);
 curr = node;
 while (curr) {
   curr.data = arr[lastIndex];

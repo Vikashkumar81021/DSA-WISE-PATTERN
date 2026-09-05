@@ -5,6 +5,7 @@ class Node {
   }
 }
 let head = null;
+
 // if (head === null) {
 //   head = new Node(1);
 // }

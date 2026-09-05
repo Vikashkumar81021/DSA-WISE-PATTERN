@@ -38,8 +38,25 @@ function deleteStart(head) {
 }
 // head = deleteStart(head);
 
-function deleteParticularNode() {}
-
+function deleteParticularNode(head, tar) {
+  if (head === null) {
+    return null;
+  }
+  let curr = head;
+  let prev = null;
+  while (curr !== null) {
+    if (curr.data === tar) {
+      prev.next = curr.next;
+      return head;
+    }
+    prev = curr;
+    curr = curr.next;
+  }
+  return head;
+}
+head = deleteParticularNode(head, 2);
+console.log("head", head);
+// 1 -> 2 -> 3 -> 4 -> null
 // function insertStart(head, data) {
 //   let newNode = new Node(data);
 //   newNode.next = head;
