@@ -10,23 +10,20 @@ node.next = node2;
 let node3 = new Node(3);
 node2.next = node3;
 
-let arr = [];
-let curr = node;
-while (curr !== null) {
-  arr.push(curr.data);
-  curr = curr.next;
-}
-console.log("Arr", arr);
-
-let lastIndex = arr.length - 1; //last element index
-console.log("lastIn", lastIndex);
-curr = node;
-while (curr) {
-  curr.data = arr[lastIndex];
-  lastIndex--;
-  curr = curr.next;
-}
-console.log(node);
+// let arr = [];
+// let curr = node;
+// while (curr !== null) {
+//   arr.push(curr.data);
+//   curr = curr.next;
+// }
+// let lastIndex = arr.length - 1;
+// curr = node;
+// while (curr) {
+//   curr.data = arr[lastIndex];
+//   lastIndex--;
+//   curr = curr.next;
+// }
+// console.log(node);
 
 // let lastIndex = arr.length - 1;
 // curr = node;
@@ -36,3 +33,17 @@ console.log(node);
 //   curr = curr.next;
 // }
 // console.log(node);
+
+//OPTMIAL APPROACH
+let curr = node;
+let prev = null;
+
+while (curr !== null) {
+  let futurePointer = curr.next;
+  curr.next = prev;
+  prev = curr;
+  curr = futurePointer;
+}
+node = prev;
+
+console.log("Node", node);
