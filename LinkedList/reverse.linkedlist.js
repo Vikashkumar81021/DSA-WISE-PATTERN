@@ -25,15 +25,6 @@ node2.next = node3;
 // }
 // console.log(node);
 
-// let lastIndex = arr.length - 1;
-// curr = node;
-// while (curr) {
-//   curr.data = arr[lastIndex];
-//   lastIndex--;
-//   curr = curr.next;
-// }
-// console.log(node);
-
 //OPTMIAL APPROACH
 let curr = node;
 let prev = null;

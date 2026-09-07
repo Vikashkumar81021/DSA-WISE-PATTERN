@@ -24,6 +24,7 @@ function insertAtMiddle(value, position = 1) {
   let n = new Node(value);
   let node = head;
   let count = 0;
+  // while humein us node tak le ja raha hai jiske baad new node insert karna hai.
   while (count < position - 1) {
     node = node.next;
     count++;

@@ -54,3 +54,13 @@ console.log(head);
 // Traverse/search/insert after nodes: current use karo, head preserve karo.
 // First node delete/remove karna hai: head = head.next kar sakte ho.
 // List ko intentionally modify kar rahe ho: head change ho sakta hai.
+
+//without constructor
+class Node {}
+
+const node = new Node();
+//manually  create data,next
+node.data = 10;
+node.next = null;
+
+console.log(node);
