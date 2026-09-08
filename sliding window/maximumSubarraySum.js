@@ -50,3 +50,18 @@ for (let i = k; i < arr.length; i++) {
   max = Math.max(windowSum, max);
 }
 console.log("Max subarray is", max);
+
+let array = [1, 3, 2, 5, 1];
+let s = 2;
+let windowAdd = 0;
+for (let i = 0; i < s; i++) {
+  windowAdd += array[i];
+}
+let maxi = windowAdd;
+for (let i = s; i < array.length; i++) {
+  let remove = i - s;
+  let add = i;
+  windowAdd = windowAdd - array[remove] + array[add];
+  maxi = Math.max(windowAdd, maxi);
+}
+console.log("Max", maxi);
