@@ -15,5 +15,10 @@ function maxSum(arr, tar) {
   return false;
 }
 const arr = [1, 4, 20, 3, 10, 5];
-let tar = 133;
+let tar = 240;
+if (tar === true) {
+  console.log("tar", tar);
+} else {
+  console.log("not found");
+}
 console.log(maxSum(arr, tar));
