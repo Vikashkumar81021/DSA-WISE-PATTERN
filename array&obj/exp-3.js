@@ -12,4 +12,16 @@ for (let i = 0; i < payment.length; i++) {
     map.set(payment[i].userId, map.get(payment[i].userId) + payment[i].amount);
   }
 }
+
 console.log(map);
+
+let str = "a    b     d   d";
+let res = "";
+let j = 0;
+for (let i = 0; i < str.length; i++) {
+  if (str[i] !== " ") {
+    res += str[i];
+    j++;
+  }
+}
+console.log(res);
