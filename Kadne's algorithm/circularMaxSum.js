@@ -19,3 +19,5 @@ function maxSubarraySumCircular(arr) {
   }
   return Math.max(circularSum, maxSum);
 }
+let arr = [5, 4, -1, 7, 8];
+console.log(maxSubarraySumCircular(arr));

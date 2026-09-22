@@ -12,7 +12,7 @@ class Queue {
   }
   peek() {
     if (this.isEmpty()) {
-      throw new Error("Element is not founf");
+      throw new Error("Element is not found");
     }
     return this.#item[0];
   }

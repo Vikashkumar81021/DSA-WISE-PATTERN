@@ -10,4 +10,5 @@ function minSubArray(arr) {
   }
   return res;
 }
+
 console.log(minSubArray(arr));
