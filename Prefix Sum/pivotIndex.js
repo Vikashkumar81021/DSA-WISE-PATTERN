@@ -16,6 +16,7 @@
 //   }
 //   return suffix;
 // }
+
 // function pivotIndex(arr) {
 //   let suffix = suffixSum(arr);
 //   let prefix = prefixSum(arr);
@@ -55,3 +56,4 @@ function pivotIndex(arr) {
   return -1;
 }
 let arr = [1, 7, 3, 6, 5, 6];
+console.log(pivotIndex(arr));
