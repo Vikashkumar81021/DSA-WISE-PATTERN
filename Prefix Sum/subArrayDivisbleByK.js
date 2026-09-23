@@ -9,6 +9,7 @@ function subArrayDivByK(arr, k) {
     if (rem < 0) {
       rem += k;
     }
+
     if (map.has(rem)) {
       ans += map.get(map, (map.get(rem) || 0) + 1);
     }
