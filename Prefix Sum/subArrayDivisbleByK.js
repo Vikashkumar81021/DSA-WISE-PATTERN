@@ -16,3 +16,4 @@ function subArrayDivByK(arr, k) {
   }
   return ans;
 }
+console.log(subArrayDivByK(arr, 3));

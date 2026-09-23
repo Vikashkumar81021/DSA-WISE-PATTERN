@@ -11,3 +11,9 @@ function rangeSum(nums, queries) {
   }
   return res;
 }
+let arr = [1, 2, 3, 4];
+let q = [
+  [0, 1],
+  [0, 1],
+];
+console.log(rangeSum(arr, q));
