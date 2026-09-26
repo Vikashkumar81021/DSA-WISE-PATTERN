@@ -17,6 +17,9 @@ var moveZeroes = function (nums) {
 
   return nums;
 };
+var nums = [0, 1, 0, 3, 12];
+
+// console.log(moveZeroes(nums));
 
 var moveZeroes = function (nums) {
   let slow = 0;
@@ -30,3 +33,19 @@ var moveZeroes = function (nums) {
 
   return nums;
 };
+
+let array = [1, 0, 2, 0, 3, 4];
+let index = 0;
+let zero = 0;
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === 0) {
+    zero++;
+  } else {
+    array[index] = array[i];
+    index++;
+  }
+}
+for (let i = array.length - zero; i < array.length; i++) {
+  array[i] = 0;
+}
+console.log("Array", array);
