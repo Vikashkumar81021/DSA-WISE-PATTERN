@@ -16,7 +16,6 @@ let students = [
   },
 ];
 let avg = [];
-
 for (let i = 0; i < students.length; i++) {
   let mark = students[i].marks;
 
