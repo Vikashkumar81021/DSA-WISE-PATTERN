@@ -8,6 +8,8 @@ var totalFruit = function (fruits) {
     } else {
       map.set(fruits[i], 1);
     }
+    console.log("size", map.size);
+
     while (map.size > 2) {
       map.set(fruits[low], map.get(fruits[low]) - 1);
       if (map.get(fruits[low]) === 0) {
