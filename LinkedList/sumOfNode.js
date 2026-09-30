@@ -12,7 +12,6 @@ function sumofNodes(head, n) {
     curr = curr.next;
     pos++;
   }
-
   while (curr !== null) {
     sum += curr.val;
     curr = curr.next;
