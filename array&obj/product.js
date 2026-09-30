@@ -28,14 +28,14 @@ function getProductCountByCategory(arr) {
   }
   return obj;
 }
-let products = [
-  { id: 1, name: "Laptop", category: "electronics" },
-  { id: 2, name: "Phone", category: "electronics" },
-  { id: 3, name: "Shirt", category: "clothing" },
-  { id: 4, name: "Jeans", category: "clothing" },
-  { id: 5, name: "Mouse", category: "electronics" },
-  { id: 6, name: "Shoes", category: "footwear" },
-];
+// let products = [
+//   { id: 1, name: "Laptop", category: "electronics" },
+//   { id: 2, name: "Phone", category: "electronics" },
+//   { id: 3, name: "Shirt", category: "clothing" },
+//   { id: 4, name: "Jeans", category: "clothing" },
+//   { id: 5, name: "Mouse", category: "electronics" },
+//   { id: 6, name: "Shoes", category: "footwear" },
+// ];
 // console.log(getProductCountByCategory(products));
 
 function getUsersWithDuplicateEmail(users) {
@@ -134,4 +134,19 @@ let transactions = [
   { id: 3, userId: 102, amount: 1000, type: "credit" },
   { id: 4, userId: 101, amount: 300, type: "credit" },
   { id: 5, userId: 102, amount: 400, type: "debit" },
+];
+let products = [
+  { id: 1, name: "Laptop", category: "electronics" },
+  { id: 2, name: "Phone", category: "electronics" },
+  { id: 3, name: "Shirt", category: "clothing" },
+  { id: 4, name: "Shoes", category: "clothing" },
+];
+
+let sales = [
+  { productId: 1, quantity: 2 },
+  { productId: 2, quantity: 5 },
+  { productId: 1, quantity: 3 },
+  { productId: 3, quantity: 4 },
+  { productId: 2, quantity: 2 },
+  { productId: 4, quantity: 6 },
 ];
