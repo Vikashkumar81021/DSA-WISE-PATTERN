@@ -91,7 +91,6 @@ function getUsersWithSameDepartment(users) {
   let res = {};
   for (let i = 0; i < users.length; i++) {
     let department = users[i].department;
-
     if (obj[department]) {
       obj[department].push(users[i].name);
     } else {
@@ -150,3 +149,31 @@ let sales = [
   { productId: 2, quantity: 2 },
   { productId: 4, quantity: 6 },
 ];
+
+function getProductSales(products, sales) {
+  let freq = new Map();
+
+  // Total quantity calculate karna
+  for (let sale of sales) {
+    if (!freq.has(sale.productId)) {
+      freq.set(sale.productId, sale.quantity);
+    } else {
+      freq.set(sale.productId, freq.get(sale.productId) + sale.quantity);
+    }
+  }
+
+  let result = [];
+
+  // Product details ke saath totalSold add karna
+  for (let product of products) {
+    result.push({
+      productId: product.id,
+      name: product.name,
+      totalSold: freq.get(product.id) || 0,
+    });
+  }
+
+  return result;
+}
+
+console.log(getProductSales(products, sales));
