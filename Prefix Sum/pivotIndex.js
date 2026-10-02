@@ -38,7 +38,7 @@
 // let arr = [1, 7, 3, 6, 5, 6];
 
 //OPTIMIAL WAY
-
+// Pivot index mein arr[i] current element ko left sum ya right sum mein include nahi karte.
 function pivotIndex(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -47,7 +47,8 @@ function pivotIndex(arr) {
 
   let leftSum = 0;
   for (let i = 1; i < arr.length; i++) {
-    let rightSum = sum - leftSum - arr[i];
+    // Pivot index mein arr[i] current element ko left sum ya right sum mein include nahi karte.
+    let rightSum = sum - leftSum - arr[i]; //arr[i] minus kr rhe hai q ki current index ignore krna hai
     if (leftSum === rightSum) {
       return i;
     }
@@ -57,3 +58,29 @@ function pivotIndex(arr) {
 }
 let arr = [1, 7, 3, 6, 5, 6];
 console.log(pivotIndex(arr));
+//dry run
+// Index:   0  1  2
+// Array:  [1, 2, 3]
+
+// Index 0: Left = 0, Right = 2 + 3 = 5 ❌
+
+// Index 1: Left = 1, Right = 3 ❌
+
+// Index 2: Left = 1 + 2 = 3, Right = 0 ❌
+
+// Kisi bhi index par:
+
+// Left Sum === Right Sum
+
+// nahi hua.
+
+// Pivot index mein arr[i] current element ko left sum ya right sum mein include nahi karte.
+// [1, 7, 3] [6] [5, 6]
+//     LEFT   ↑    RIGHT
+//           pivot
+
+// Left sum = 1 + 7 + 3 = 11
+
+// Pivot element = 6 → ignore
+
+// Right sum = 5 + 6 = 11
