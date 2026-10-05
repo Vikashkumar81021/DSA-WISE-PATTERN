@@ -1,5 +1,6 @@
 function merge(intervals) {
   let merge = [];
+  //hm sort krte hai intervals[0] sare sort ho jaata hai
   intervals.sort((a, b) => a[0] - b[0]);
   // merge.push(intervals[0]);
   for (let i = 0; i < intervals.length; i++) {
@@ -25,6 +26,16 @@ let intervals = [
   [15, 18],
 ];
 console.log(merge(intervals));
+
+// Previous interval        Current interval
+//       [1------5]              [3------7]
+//               ↑                ↑
+//            last[1]          interval[0]
+
+//               compare
+//                  ↓
+
+// //         interval[0] <= last[1]
 
 // Previous interval        Current interval
 //       [1------5]              [3------7]
