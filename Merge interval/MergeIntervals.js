@@ -10,6 +10,7 @@ function merge(intervals) {
     }
     let last = merge[merge.length - 1]; //PREVOIS END
     //CURRENT ELEMNT KA FIRST ELEMENT
+    // CURRENT ka START <= LAST ka END ?
     if (intervals[i][0] <= last[1]) {
       last[1] = Math.max(last[1], intervals[i][1]);
     } else {
