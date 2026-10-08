@@ -34,3 +34,40 @@ function insertAtMiddle(value, position = 1) {
 }
 insertAtMiddle(5);
 console.log(head);
+
+function insertInMiddle(head, x) {
+  let slow = head;
+  let fast = head;
+  while (fast !== null || fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  let newNode = new Node(x);
+  newNode.next = slow.next;
+  slow.next = newNode;
+}
+
+function insertAtPosition(head, pos, value) {
+  let newNode = new Node(value);
+  //insert begning
+  if (pos === 0) {
+    newNode.next = head;
+    return newNode;
+  }
+
+  let curr = head;
+  let count = 0;
+
+  while (curr !== null && count < pos - 1) {
+    curr = curr.next;
+    count++;
+  }
+  if (curr === null) {
+    return head;
+  }
+
+  newNode.next = curr.next;
+  curr.next = newNode;
+
+  return head;
+}

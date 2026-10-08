@@ -7,6 +7,12 @@ class Node {
 let head = new Node(10);
 let newNode = new Node(20);
 head.next = newNode;
+let n = new Node(30);
+newNode.next = n;
+let n2 = new Node(40);
+n.next = n2;
+let n3 = new Node(50);
+n2.next = n3;
 // newNode.next = head;
 // console.log("head", newNode);
 
@@ -28,7 +34,7 @@ function deleteLastNode(head) {
 }
 
 // head = deleteLastNode(head);
-console.log("head", head);
+// console.log("head", head);
 function deleteStart(head) {
   if (head === null) {
     console.log("Linedlist is Empty");
@@ -55,7 +61,7 @@ function deleteParticularNode(head, tar) {
   return head;
 }
 head = deleteParticularNode(head, 2);
-console.log("head", head);
+// console.log("head", head);
 // 1 -> 2 -> 3 -> 4 -> null
 // function insertStart(head, data) {
 //   let newNode = new Node(data);
@@ -114,3 +120,23 @@ console.log("head", head);
 // }
 // head = deleteIndex(head, 5);
 // console.log(head);
+//10,20,30,40,50
+//     ||
+function deleteMiddle(head) {
+  let curr = head;
+  let count = 0;
+  while (curr !== null) {
+    count++;
+    curr = curr.next;
+  }
+  let mid = Math.floor(count / 2);
+  curr = head;
+  let prev = null;
+  for (let i = 0; i < mid; i++) {
+    prev = curr;
+    curr = curr.next;
+  }
+  prev.next = curr.next;
+  return head;
+}
+console.log(deleteMiddle(head));

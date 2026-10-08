@@ -10,10 +10,10 @@ let head2 = new Node(20);
 head.next = head2;
 let head3 = new Node(30);
 head2.next = head3;
-let head4 = new Node(40);
-head3.next = head4;
-let head5 = new Node(50);
-head4.next = head5;
+// let head4 = new Node(40);
+// head3.next = head4;
+// let head5 = new Node(50);
+// head4.next = head5;
 // head = head.next;
 // head Node {
 //   data: 10,
@@ -23,7 +23,23 @@ head4.next = head5;
 // head.next = head3;
 
 // head2.next = head4;
-console.log(head);
+// console.log(head);
 
-head2.next = head5;
-console.log(head);
+// head2.next = head5;
+// console.log(head);
+
+function deleteLastNode(head) {
+  let curr = head;
+  let prev = null;
+  while (curr.next !== null) {
+    prev = curr;
+    curr = curr.next;
+  }
+  prev.next = null;
+  return head;
+}
+console.log(deleteLastNode(head));
+
+function deleteFirst(head) {
+  return head.next;
+}
