@@ -1,17 +1,29 @@
 function merge(intervals) {
-  let merge = [];
-  //hm sort krte hai intervals[0] sare sort ho jaata hai
-  intervals.sort((a, b) => a[0] - b[0]);
-  // merge.push(intervals[0]);
-  for (let i = 0; i < intervals.length; i++) {
-    if (merge.length === 0) {
-      merge.push(intervals[i]);
-      continue;
-    }
-    let last = merge[merge.length - 1]; //PREVOIS END
+  // let merge = [];
+  // //hm sort krte hai intervals[0] sare sort ho jaata hai
+  // intervals.sort((a, b) => a[0] - b[0]);
+  // // merge.push(intervals[0]);
+  // for (let i = 0; i < intervals.length; i++) {
+  //   if (merge.length === 0) {
+  //     merge.push(intervals[i]);
+  //     continue;
+  //   }
+  //   let last = merge[merge.length - 1]; //PREVOIS END
 
-    //CURRENT ELEMNT KA FIRST ELEMENT
-    // CURRENT ka START <= LAST ka END ?
+  //   //CURRENT ELEMNT KA FIRST ELEMENT
+  //   // CURRENT ka START <= LAST ka END ?
+  //   if (intervals[i][0] <= last[1]) {
+  //     last[1] = Math.max(last[1], intervals[i][1]);
+  //   } else {
+  //     merge.push(intervals[i]);
+  //   }
+  // }
+  // return merge;
+  intervals.sort((a, b) => a[0] - b[0]);
+  let merge = [];
+  merge.push(intervals[0]);
+  for (let i = 1; i < intervals.length; i++) {
+    let last = merge[merge.length - 1];
     if (intervals[i][0] <= last[1]) {
       last[1] = Math.max(last[1], intervals[i][1]);
     } else {
