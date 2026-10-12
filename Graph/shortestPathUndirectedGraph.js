@@ -35,9 +35,7 @@ parent[src] = -1;
 
 while (queue.length > 0) {
   let node = queue.shift();
-
   if (node === dest) break;
-
   for (let neighbour of graph[node]) {
     if (!visited.has(neighbour)) {
       visited.add(neighbour);

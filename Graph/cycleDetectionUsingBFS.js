@@ -7,6 +7,7 @@ const edges = [
 ];
 
 let graph = {};
+
 for (let vertex of vertices) {
   graph[vertex] = [];
 }
@@ -23,7 +24,6 @@ function cycleDetectionBFS(node) {
   while (Queue.length > 0) {
     let [node, parent] = Queue.shift();
     console.log("parent", parent);
-
     for (let neighbour of graph[node]) {
       if (!visited.has(neighbour)) {
         visited.add(neighbour);
