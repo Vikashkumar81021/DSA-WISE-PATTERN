@@ -47,3 +47,18 @@ function isValid(s) {
 
   return stack.length === 0;
 }
+
+let str = "()()";
+let st = [];
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === "(") {
+    st.push(str[i]);
+  } else {
+    if (st.length === 0) {
+      console.log(false);
+      break;
+    } else {
+      st.pop();
+    }
+  }
+}
