@@ -96,4 +96,23 @@ let orders = [
 // console.log(getOrdersAbovePrice(orders, 20000));
 // console.log(getMostExpensiveOrder(orders));
 // console.log(getAverageOrderPrice(orders));
-console.log(getOrderById(orders, 4));
+// console.log(getOrderById(orders, 4));
+
+function totalPassedMarks(students) {
+  let sum = 0;
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].marks > 40) {
+      sum += students[i].marks;
+    }
+  }
+  return sum;
+}
+
+const students = [
+  { id: 1, name: "Aman", marks: 30 },
+  { id: 2, name: "Priya", marks: 80 },
+  { id: 3, name: "Rahul", marks: 45 },
+  { id: 4, name: "Neha", marks: 20 },
+  { id: 5, name: "Simran", marks: 65 },
+];
+console.log(totalPassedMarks(students));
