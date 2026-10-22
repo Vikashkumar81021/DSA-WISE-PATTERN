@@ -15,7 +15,7 @@ function occurence(arr, tar) {
     }
   }
 
-  (low = 0), (high = arr.length - 1);
+  ((low = 0), (high = arr.length - 1));
   while (low <= high) {
     let mid = Math.floor((low + high) / 2);
     if (arr[mid] === tar) {

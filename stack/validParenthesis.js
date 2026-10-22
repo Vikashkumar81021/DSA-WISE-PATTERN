@@ -4,6 +4,7 @@ function validParenthesis(s) {
     if (ch === "(" || ch === "[" || ch === "{") {
       stack.push(ch);
     } else {
+      //aagr koi opening hai he nhe phir bhe closing mein aa gae means wrong hai false return
       if (stack.length === 0) return false;
       if (
         (ch === ")" && stack[stack.length - 1] !== "(") ||
@@ -16,6 +17,9 @@ function validParenthesis(s) {
     }
   }
   return stack.length === 0;
+  //   Stack empty hai → true (saare brackets match hue).
+  // Stack empty nahi hai → false (kuch opening brackets unmatched hain).
+  // Bas isi liye loop ke baad ye check zaroori hai.
 }
 
 let s = "()";

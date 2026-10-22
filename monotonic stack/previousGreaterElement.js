@@ -1,3 +1,16 @@
+// function previousGreaterElement(arr) {
+//   let res = new Array(arr.length).fill(-1);
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i - 1; j >= 0; j--) {
+//       if (arr[j] > arr[i]) {
+//         res[i] = arr[j];
+//         break;
+//       }
+//     }
+//   }
+//   return res;
+// }
+
 function previousGreaterElement(arr) {
   let stack = [];
   let res = new Array(arr.length).fill(-1);
@@ -12,5 +25,5 @@ function previousGreaterElement(arr) {
   }
   return res;
 }
-let arr = [10, 4, 2, 20, 40, 12, 30];
+let arr = [3, 1, 4, 2, 5];
 console.log(previousGreaterElement(arr));
