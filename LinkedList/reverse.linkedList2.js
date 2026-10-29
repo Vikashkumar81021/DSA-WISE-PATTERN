@@ -13,7 +13,6 @@ const node4 = new LinkedList(4);
 node3.next = node4;
 const node5 = new LinkedList(5);
 node4.next = node5;
-console.log("node", node);
 
 //BRUTE FORCE
 // function reverseList(head, left, right) {
@@ -50,7 +49,7 @@ function reverseList(head, left, right) {
   }
   let curr = temp;
   let prev = null;
-  let time = right + left - 1;
+  let time = right - left + 1;
   while (time-- && curr !== null) {
     let future = curr.next;
     curr.next = prev;

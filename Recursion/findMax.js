@@ -21,3 +21,15 @@ function maxVal(arr, i = 0, max = -Infinity) {
 
 let arr = [1, 2, 5, 9];
 console.log(maxVal(arr));
+
+function findMax(arr, i) {
+  if (i === arr.length - 1) {
+    return arr[i];
+  }
+  let max = findMax(arr, i + 1);
+  if (arr[i] > max) {
+    max = arr[i];
+  }
+  return max;
+}
+console.log(findMax([4, 7, 2, 9], 0));

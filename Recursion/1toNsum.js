@@ -26,3 +26,12 @@ check condtion-fail
 sum(5)
 return add+=5 add=5
 */
+
+function add(n) {
+  if (n === 1) {
+    return 1;
+  }
+  let ans = add(n - 1);
+  return ans + n;
+}
+console.log(add(5));
