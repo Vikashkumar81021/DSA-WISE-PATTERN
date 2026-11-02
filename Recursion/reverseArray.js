@@ -1,6 +1,6 @@
 function reversePointer(arr, left = 0, right = arr.length - 1) {
   if (left >= right) {
-    return;
+    return arr;
   }
   const temp = arr[left];
   arr[left] = arr[right];
